@@ -1,0 +1,60 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Animated Heading */
+.animated-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007bff;
+    text-align: center;
+
+    /* Animation */
+    animation: bounce 2s infinite, fade-in 2s ease-in-out;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Fade-in Animation */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes color-change {
+    0% { color: #00d5ff; }
+    20% { color: #ff5733; }
+    40% { color: darkorange;}
+    60% { color: #f501a4; }
+    80% { color: rgb(5, 248, 175);}
+
+}
+
+.animated-heading {
+    animation: bounce 2s infinite, fade-in 2s ease-in-out, color-change 3s infinite;
+}
+
